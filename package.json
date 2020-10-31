@@ -4,7 +4,6 @@
   "description": "a restaurant app that lets users input the names of burgers they'd like to eat, using MySQL, Node, Express, Handlebars, and ORM",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -19,6 +18,7 @@
   "homepage": "https://github.com/juliettegondon/nomnomburger#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1"
   }
 }
