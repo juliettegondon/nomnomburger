@@ -1,19 +1,17 @@
 // dependencies 
 var express = require("express");
-
 var PORT = process.env.PORT || 4040;
-
 var app = express();
 
 
 // handlebars
 var exphbs = require("express-handlebars");
 
-// rendering engine - handlebars
+// rendering engine - handlebars to handle data parsing
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// giving server access to routes
+// giving server access to routes in controller folder
 var routes = require("./controllers/burgers_Controller.js");
 app.use(routes);
 
