@@ -13,7 +13,7 @@ connection.connect(function(err) {
     console.error("CONNECTION ERROR: " + err.stack);
     return;
   }
-  console.log("GREAT SUCCESS! Connected at ID" + connection.threadId);
+  console.log("GREAT SUCCESS! Connected at ID: " + connection.threadId);
 });
 
 module.exports = connection;

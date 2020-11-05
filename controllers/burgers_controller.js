@@ -8,28 +8,27 @@ var router = express.Router();
 // GET - selectAll(); retrieves all from db
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
-    var hbObj = {burgers: data};
-    console.log(hbObj);
+    var hbObj = { burgers: data };
+    console.log("--------->", hbObj);
     res.render("index", hbObj);
   });
 });
 
 
 // POST - insertOne(); inserts one burger to db
-router.post("/", function(req, res){
-  burger.insertOne(["burger_name", "devoured"], 
-  [req.body.burger_name, req.body.devoured], function(result) {
-  res.redirect("/");
+router.post("/burgers", function(req, res){
+  console.log("burger name --->", req.body.burger_name);
+  burger.insertOne(req.body.burger_name, function(){
+    res.redirect("/")
   });
 });
 
 
 
 // PUT - updateOne(); updates one burger to devoured in db
-router.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-	console.log("condition --->", condition);
-	burger.updateOne(condition, function(result) {
+router.put("/burgers/:id", function(req, res) {
+	console.log("burger ID --->", req.params.id);
+	burger.updateOne(req.params.id, function() {
 	res.redirect("/");
 	});
 })

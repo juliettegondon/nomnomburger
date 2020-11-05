@@ -2,6 +2,7 @@
 var express = require("express");
 var PORT = process.env.PORT || 4040;
 var app = express();
+const path = require("path")
 
 
 // handlebars
@@ -16,13 +17,15 @@ var routes = require("./controllers/burgers_Controller.js");
 app.use(routes);
 
 // serve static content for the app from public folder.
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname , "../" , "/public")));
 
 // middleware makes data available before it hts route
 // setup to handle URL encodings and json
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//// ---- STACK OVERFLOW SUGGESTED SOLUTIONS ------ 
+app.use(express.static(__dirname + "/public"));
 
 
 

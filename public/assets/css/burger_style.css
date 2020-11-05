@@ -1,0 +1,97 @@
+body {
+    background: #000000;
+        margin: 0 auto;
+        width: 70%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+        @media (max-width: 500px) {
+          p {
+            font-size: 0.75em; 
+          }
+          .lead {
+            font-size:0.75em;
+          }
+        }
+        @media (orientation: landscape) {
+      
+        }
+        @media(orientation: portrait) {
+      
+        }
+        @media (min-width: 800px) {
+          p { font-size: 1.5rem;
+              line-height: 1.5;
+          }
+        }
+h1 {
+    color: #f9d500;
+    font-size: 55px;
+    text-align: center;
+    font-family:'Bungee Inline';
+  }
+h2 {
+    color: #a10f0f;
+    font-family:'Black Han Sans';
+  }
+  #pulp {
+    display: block;
+     margin: auto;
+     align-items: center;
+  }
+.notdevoured{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 20px;
+ 	text-align: center;
+ 	width: 80%;
+ 	margin: 10px;
+ 	padding: 10px;
+    background-color: #f9d500;
+    border: none;
+}
+.notdevoured:hover {
+    background-color: #db7d2f;
+}
+.devoured{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 20px;
+ 	text-align: center;
+ 	width: 80%;
+ 	margin: 10px;
+ 	padding: 10px;
+    background-color: #f9d500;
+    border: none;
+}
+
+.submitburger {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 20px;
+ 	text-align: center;
+ 	margin: 10px;
+    padding: 10px;
+    border: none;
+}
+  
+.btn{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 20px;
+ 	text-align: center;
+ 	width: 30%;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #db7d2f;
+  }
+
+.btn:hover {
+    background-color: #31345a;
+}
