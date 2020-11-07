@@ -23,8 +23,7 @@ router.get('/:id', (req, res) => {
 router.post("/", function(req, res){
   console.log('RECEIVED POST REQUEST AT ENDPOINT / --->')
   console.log("burger name --->", req.body.burger_name);
-  burger.insertOne(req.body.burger_name, function(err, res){
-    if (err) throw err;
+  burger.insertOne(["burger_name"], [req.body.burger_name], function(data){
     res.redirect("/")
   });
 });
